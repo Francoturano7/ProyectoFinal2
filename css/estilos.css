@@ -9,3 +9,37 @@
    
 
   }
+  .oscuro{
+    background-color: black;
+    color: white;
+}
+.oscuro-oscuro{
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+}
+.oscuro-claro{
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+}
+.claro-claro{
+    background-color: rgb(254, 254, 254);
+    color: rgb(0, 0, 0);
+}
+.claro-oscuro{
+    background-color: rgb(20, 20, 20);
+    color: rgb(255, 252, 252);
+}
+
+.claro{
+    background-color: white;
+    color: black;
+}
+
+
+.letraNegra{
+    color: black;
+}
+.gris{
+    background-color: rgb(44, 44, 44);
+    color: white;
+}
