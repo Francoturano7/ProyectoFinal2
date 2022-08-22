@@ -1,4 +1,5 @@
-const herramientas=[
+//spread operator
+const herramientas0=[
     {
         nombre: "Martillo",
         marca:"Tramontina",
@@ -33,7 +34,15 @@ const herramientas=[
         descripcion:"Mango plastico 500mm",
         codigo: 9935,
         precio: 1200
-    },
+    }
+]
+
+
+
+
+
+const herramientas=[
+    ...herramientas0,
     {
         nombre: "Cinta Metrica",
         marca:"Bremen",

@@ -46,8 +46,11 @@ boton.onclick=()=>{
 }
 //After clase 10
 let carrito=[];
+ 
 if(localStorage.getItem("carrito")){
-    carrito=JSON.parse(localStorage.getItem("carrito"));
+     carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+    
+     
 }
 let lista=document.getElementById("milista");
     
@@ -104,7 +107,16 @@ function agregarAlCarrito(herramienta){
     localStorage.setItem("carrito",JSON.stringify(carrito));
     
     }
+    
+    // carritoAbandonado = JSON.parse(localStorage.getItem("carrito")) || [];
+    // console.log(carritoAbandonado);
+    // carritoAbandonado.forEach(herramienta =>{
+        
+    //         agregarAlCarrito(herramienta);
+    //     });
 
+
+    
 
 
 
