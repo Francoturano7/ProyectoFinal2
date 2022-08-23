@@ -1,3 +1,4 @@
+
 // modo oscuro o claro
 let modo;
 if(localStorage.getItem("modo")){
@@ -33,15 +34,34 @@ boton.onclick=()=>{
         boton.innerText="Modo Claro";
         tablabody.className=modo+"-claro";
         tablon.className=modo+"-claro";
-        modo="oscuro"
+        modo="oscuro";
+        Swal.fire({
+            title: 'Modo-Oscuro',
+            text: 'ACTIVADO',
+            imageUrl: '/imagenes/negro.png',
+            imageWidth: 100,
+            imageHeight: 100,
+            imageAlt: 'oscuro',
+            confirmButtonColor: 'rgb(211, 5, 5)',
+          }).showToast();
     }else{
         document.body.className="claro";
         principal.className="claro";
         boton.innerText="Modo Oscuro";
         tablabody.className=modo+"-oscuro";
         tablon.className=modo+"-oscuro";
-        modo="claro"
+        modo="claro";
+        Swal.fire({
+            title: 'Modo-Claro',
+            text: 'ACTIVADO',
+            imageUrl: '/imagenes/blanco.png',
+            imageWidth: 100,
+            imageHeight: 100,
+            imageAlt: 'oscuro',
+            confirmButtonColor: 'rgb(211, 5, 5)',
+          }).showToast();
     }
+    
     localStorage.setItem("modo",modo);
 }
 //After clase 10
@@ -93,7 +113,15 @@ div1.append(div2);
 function agregarAlCarrito(herramienta){
     carrito.push(herramienta);
     console.log(carrito);
-    alert("Herramienta: "+herramienta.nombre+" agregado al carro!");
+   Swal.fire({
+        title: (herramienta.nombre).toUpperCase(),
+        text: 'Agregado al carrito!',
+        imageUrl:"./imagenes/carrito.png" ,
+        imageWidth: 100,
+        imageHeight: 100,
+        imageAlt: '',
+        confirmButtonColor: 'rgb(211, 5, 5)',
+      })
     document.getElementById("tablabody").innerHTML+=`
         <tr>
             <td>${herramienta.codigo}</td>
@@ -106,6 +134,19 @@ function agregarAlCarrito(herramienta){
     `;
     localStorage.setItem("carrito",JSON.stringify(carrito));
     
+    };
+
+    let finalizar=document.getElementById("finalizar");
+    finalizar.onclick=()=>{
+        Swal.fire({
+            title: 'Pedido Finalizado!',
+            text: 'Estamos preparando tu pedido..',
+            imageUrl: '/imagenes/finalizado.png',
+            imageWidth: 200,
+            imageHeight: 100,
+            imageAlt: 'Completado',
+            confirmButtonColor: 'rgb(211, 5, 5)',
+          }).showToast();
     }
     
     // carritoAbandonado = JSON.parse(localStorage.getItem("carrito")) || [];
