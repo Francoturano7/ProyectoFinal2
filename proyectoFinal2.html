@@ -1,108 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-
-        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-        <link rel="stylesheet" href="./css/estilos.css">
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+    <link rel="stylesheet" href="./css/estilos.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <title>Ferreteria Roca</title>
+</head>
 
 <body>
-    <nav class="navbar navbar-dark bg-dark fixed-top ">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="./index.html"><img src="./imagenes/logoR.png" alt="logoNavbar"></a>
-            <a class="navbar-brand"></a>
-            <a class="navbar-brand"></a>
-            <a class="navbar-brand"></a>
-          <a class="navbar-brand" style="font-size: 38px;" href="#">FERRETERIA ROCA</a>
-          <a class="navbar-brand"></a>
-          <a class="navbar-brand"></a>
-          <div id="principal" class=" claro">
-            <button id="mode" class=" gris" href="#">Modo Claro</button>
-    </div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
-            <div class="offcanvas-header">
-              <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">FERRETERIA ROCA</h5>
-              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-            </div>
-            <div class="offcanvas-body">
-              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#">Inicio</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Productos</a>
-                </li>
-              </ul>
-              <form class="d-flex" role="search">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-danger" type="submit">Buscar</button>
-              </form>
-            </div>
-          </div>
-        </div>
-      </nav>
-      <br><br><br><br><br><br>
+  <nav class="navbar navbar-dark bg-dark fixed-top ">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="proyectoFinal2.html"><img src="./imagenes/logoR.png" alt="logoNavbar"></a>
+      <a class="navbar-brand"  href="#">
+        <h1 class="text-center"style="font-size: 35px;">FERRETERIA ROCA</h1><div id="navDolar" class="row">
+        </div></a>
+        <a class="navbar-brand" href="#"></a>
+       </div>
+
+  </nav>
     <div class="container">
-        
-        <div id="fila_prueba" class="row" style="background-color: rgb(182, 3, 3);color: white;border: 1px solid black;">
-            <div class="col">
-                <h1 class="text-center" style="font-size: 25px">HERRAMIENTAS</h1>
+        <br><br><br><br><br><br><br><br>
+        <p></p>
+        <div class="row">
+            <div class="col-md-2" id="boton">
+                <!-- Aqui el boton -->
             </div>
         </div>
-        
-        <div  id="cartas"></div>
-        
-        <div>
-            <h4 class=" text-center" style="background-color: rgb(211, 5, 5);color: white;border: 1px solid black;">CARRITO DE COMPRAS</h4>
-            <table class="table table-striped">
-                <thead >
-                    <tr id="tablon">
-                        <th scope="col">Codigo</th>
-                        <th scope="col">Nombre</th>
-                        <th scope="col">Marca</th>
-                        <th scope="col">Precio</th>
-                        <th scope="col"></th>
-                    </tr>
-                </thead>
-                <tbody id="tablabody">
-                    <!-- aqui tabla carrito -->
-                </tbody>
-            </table>
-            <div class="text-center">
-              <button id="finalizar" class="btn btn-danger mt-4 mb-4">Finalizar compra</button>
+        <p></p>
+        <div class="row">
+            <div class="col-md-2">
+                <select id="filtro" class="form-select" aria-label="Default select example">
+                    <option value="pordefecto">ORDENAR</option>
+                    <option value="menor">Menor precio</option>
+                    <option value="mayor">Mayor precio</option>
+                    <option value="alfabetico">Alfabéticamente</option>
+                  </select>
+                <p></p>
             </div>
-          </div>
+        </div>
+        <div id="cartas">
+            
+            <p></p>
+        </div>
+        <div id="suscripcion">
+            <!-- Aquí suscripcion -->
+        </div>
+
+
+        <div id="borrarTabla">
+          <h4 class=" text-center" style="background-color: rgb(211, 5, 5);color: white;border: 1px solid black;">CARRITO DE COMPRAS</h4>
+          <table class="table table-striped">
+              <thead >
+                  <tr id="tablon" class=" text-center">
+                      <th scope="col">Codigo</th>
+                      <th scope="col">Nombre</th>
+                      <th scope="col">Cantidad</th>
+                      <th scope="col">Precio Unitario</th>
+                      <th scope="col" >🗑️</th>
+                  </tr>
+              </thead>
+              <tbody id="tablabody">
+                 
+               </tbody>
+          </table>
+        <div class="text-center">
+            <h4 id="totalCompra">Total: $</h4>
+        </div>
+        <div class="text-center">
+          <button id="finalizar" class="btn btn-danger mt-4 mb-4">Finalizar compra</button>
+        </div>
     </div>
-    <footer>
-        <div class="card text-center text-bg-dark ">
-          <div class="card-header">
-            Ferreteria Roca
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">Derechos reservados</h5>
-            <p class="card-text">Franco Turano copyright ©</p>
-            <a href="#" class="btn btn-danger">Contacto</a>
-          </div>
-          <div class="card-footer text-muted">
-            Trabajo realizado por Turano Franco
-          </div>
-        </div>
-      </footer>
+    </div>
+
     <!-- JavaScript Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <!-- Sweet Alert -->
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <!-- Mi script -->
-    <script src="productos.js"></script>
     <script src="proyectoFinal2.js"></script>
 </body>
 

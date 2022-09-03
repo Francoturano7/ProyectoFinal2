@@ -1,0 +1,70 @@
+[{
+        "nombre": "Martillo",
+        "marca":"Tramontina",
+        "descripcion":"Galponero 650gs",
+        "codigo": 9931,
+        "precio": 3.15,
+        "foto":"imagenes/martillo.webp"
+    },
+    {
+        "nombre": "Pinza",
+        "marca":"Metz",
+        "descripcion":"Aislada 150mm",
+        "codigo": 9932,
+        "precio": 2.45,
+        "foto":"imagenes/pinza.webp"
+    },
+    {
+        "nombre": "Alicate",
+        "marca":"Bahco",
+        "descripcion":"Aislado 175mm",
+        "codigo": 9933,
+        "precio": 2.28,
+        "foto":"imagenes/alicate.webp"
+    },
+    {
+        "nombre": "Maza",
+        "marca":"Azzurra",
+        "descripcion":"1.500gs",
+        "codigo": 9934,
+        "precio": 1.58,
+        "foto":"imagenes/maza.webp"
+    },
+    {
+        "nombre": "Serrucho",
+        "marca":"Santa Juana",
+        "descripcion":"Mango plastico 500mm",
+        "codigo": 9935,
+        "precio": 4.21,
+        "foto":"imagenes/serrucho.webp"
+    },
+    {
+        "nombre": "Cinta Metrica",
+        "marca":"Bremen",
+        "descripcion":"5mts",
+        "codigo": 9936,
+        "precio": 3.75,
+        "foto":"imagenes/cinta metrica.webp"
+    },
+    {
+        "nombre": "Nivel",
+        "marca":"Crossmaster",
+        "descripcion":"Aluminio 400mm",
+        "codigo": 9937,
+        "precio": 1.75,
+        "foto":"imagenes/nivel.webp"
+    },
+    {
+        "nombre": "Llave Ajustable",
+        "marca":"Biassoni",
+        "descripcion":"Fosfatizada 200mm",
+        "codigo": 9938,
+        "precio": 3.68,
+        "foto":"imagenes/llave ajustable.webp"
+    }
+]
+
+
+
+
+
