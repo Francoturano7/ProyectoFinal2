@@ -91,13 +91,10 @@ function calcularTotal() {
     return suma;
 }
 
+
 function eliminar(codigo){
     let indice=carrito.findIndex(herramienta => herramienta.codigo==codigo);
     carrito.splice(indice,1);//eliminando del carro
-    let fila=document.getElementById(`fila${codigo}`);
-    document.getElementById("tablabody").removeChild(fila);//eliminando de la tabla
-    document.getElementById("gastoTotal").innerText=(`Total: $ ${calcularTotal()}`);
-    localStorage.setItem("carrito",JSON.stringify(carrito));
     Swal.fire({
                  text: 'Producto eliminado del carrito!',
                  imageUrl:"./imagenes/deletecarrito.png" ,
@@ -106,6 +103,12 @@ function eliminar(codigo){
                  imageAlt: '',
                  confirmButtonColor: 'rgb(211, 5, 5)',
                })
+    localStorage.setItem("carrito",JSON.stringify(carrito));
+    document.getElementById("totalCompra").innerText=(`Total: $ ${calcularTotal().toFixed(2)}`);
+    let fila=document.getElementById(`fila${codigo}`);
+    document.getElementById("tablabody").removeChild(fila);//eliminando de la tabla
+    document.getElementById("gastoTotal").innerText=(`Total: $ ${calcularTotal()}`);
+    localStorage.removeItem("carrito", JSON.stringify(carrito));
 }
 
 function ordenar() {
@@ -149,21 +152,42 @@ async function obtenerValorDolar() {
 }
 
 
-let finalizar=document.getElementById("finalizar");
-     finalizar.onclick=()=>{
-         Swal.fire({
-             title: 'Pedido Finalizado!',
-             text: 'Estamos preparando tu pedido..',
-             imageUrl: '/imagenes/finalizado.png',
-             imageWidth: 200,
-             imageHeight: 100,
-             imageAlt: 'Completado',
-             confirmButtonColor: 'rgb(211, 5, 5)',
-           }).showToast();
-          borrarTabla();
-     }
 
-    function borrarTabla(){
-        let borrarTabla=document.getElementById("borrarTabla");
-        borrarTabla.innerHTML="";
+
+  let finalizarCompra = document.getElementById("finalizar"); 
+  finalizarCompra.onclick = borrarTodo; 
+
+    
+  function borrarTodo(evento) {
+    document.getElementById("tablabody").innerHTML="";
+    localStorage.removeItem("carrito", JSON.stringify(carrito));
+    document.getElementById("totalCompra").innerText=(`Total: $ 0,00`);
+    localStorage.removeItem("carrito", JSON.stringify(carrito));
+    document.getElementById("todo").innerHTML=`
+    <div class="bg-dark" >
+    <h1 class="btn-danger text-center m-3 pt-5 pb-5 ps-4 pe-4" style="background-color: rgb(211, 5, 5);color: white;">
+    Gracias por su compra
+    </h1>
+    <img src="imagenes/logoR.png" class="rounded mx-auto d-block" alt="...">
+    <h2 class="btn-danger text-center m-3 pt-5 pb-5 ps-4 pe-4" style="background-color: rgb(211, 5, 5);color: white;">
+    Ferreteria Roca
+    </h2>
+    </div>
+`;
+document.getElementById("todo").className="bg-dark";
+    
+
+    
+    Swal.fire({
+        title: 'Pedido Finalizado!',
+        text: 'Estamos preparando tu pedido..',
+        imageUrl: '/imagenes/finalizado.png',
+        imageWidth: 200,
+        imageHeight: 100,
+        imageAlt: 'Completado',
+        confirmButtonColor: 'rgb(211, 5, 5)',
+      }).showToast();
+      
+      
+
   }
